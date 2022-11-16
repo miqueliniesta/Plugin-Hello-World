@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.build.json",
+  "compilerOptions": {
+    "declarationDir": "./types",
+    "rootDir": "./",
+    "baseUrl": "./",
+    "lib": ["ES2019", "dom"]
+  },
+  "include": ["./index.ts"],
+  "exclude": [
+    "./types/**/*",
+    "./node_modules/**/*",
+    "./dist/**/*",
+    "**/*/__test__/**/*",
+    "**/*.spec.tsx",
+    "**/*.spec.jsx",
+    "**/*.spec.ts",
+    "**/*.spec.js"
+  ]
+}

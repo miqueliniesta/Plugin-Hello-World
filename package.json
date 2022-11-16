@@ -1,0 +1,57 @@
+{
+  "name": "@pos-web/plugin-hello-world",
+  "version": "0.0.1",
+  "description": "This plugin is a template.",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "main": "./dist/@pos-web/plugin-hello-world.umd.js",
+  "browser": "./dist/@pos-web/plugin-hello-world.umd.min.js",
+  "private": true,
+  "files": [
+    "dist",
+    "translations"
+  ],
+  "scripts": {
+    "build": "devkit-scripts build && yarn build:declarations",
+    "build:dev": "devkit-scripts build --formats umd",
+    "build:prod": "devkit-scripts build --formats umd.min",
+    "build:declarations": "tsc --project ./tsconfig.build.json",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@orion/core": "1.7.0",
+    "@orion/i18n": "1.7.0",
+    "@orion/ui": "1.7.0",
+    "@pos-web/devkit-jest-gherkin": "^1.1.15",
+    "@pos-web/devkit-scripts": "5.2.2",
+    "@testing-library/dom": "8.11.1",
+    "@testing-library/react": "12.1.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-is": "17.0.2",
+    "react-redux": "7.2.6",
+    "redux": "4.1.2",
+    "reselect": "4.1.5"
+  },
+  "peerDependencies": {
+    "@orion/core": "^1.4.1",
+    "@orion/i18n": "^1.4.1",
+    "@orion/ui": "^1.4.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-is": "^17.0.0"
+  },
+  "externalDependencies": {
+    "react": {
+      "global": "React"
+    },
+    "react-dom": {
+      "global": "ReactDOM"
+    },
+    "react-is": {
+      "global": "ReactIs"
+    }
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  }
+}
